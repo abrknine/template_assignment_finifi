@@ -1,0 +1,166 @@
+{
+  "info": {
+    "_postman_id": "c406ddb0-8275-4566-9cd3-08bc14931897",
+    "name": "finifi",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "27907064"
+  },
+  "item": [
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5003/api/match/CI4PO05788",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5003",
+          "path": [
+            "api",
+            "match",
+            "CI4PO05788"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "a41466a9-96eb-425d-b858-28224138af3f",
+              "src": "/Users/abhishekbahukhandi/Downloads/Invoice.pdf"
+            },
+            {
+              "key": "documentType",
+              "value": "invoice",
+              "type": "text",
+              "uuid": "3e0bb728-aba6-494c-9d65-f87177085365"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5003/api/documents/upload",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5003",
+          "path": [
+            "api",
+            "documents",
+            "upload"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "805826a0-6e98-4e96-9119-56ec46598b3c",
+              "src": "/Users/abhishekbahukhandi/Downloads/GRN.pdf"
+            },
+            {
+              "key": "documentType",
+              "value": "grn",
+              "type": "text",
+              "uuid": "503b2152-e487-4db6-9a76-b6f21e388a4e"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5003/api/documents/upload",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5003",
+          "path": [
+            "api",
+            "documents",
+            "upload"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "documentType",
+              "value": "po",
+              "type": "text",
+              "uuid": "05d71f03-5ed7-40ee-9187-2db465e0bd11"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "3607562e-89e3-44d8-8cca-2392f2047198",
+              "src": "/Users/abhishekbahukhandi/Downloads/PO.pdf"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5003/api/documents/upload",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5003",
+          "path": [
+            "api",
+            "documents",
+            "upload"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5003/api/match/CI4PO05788",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5003",
+          "path": [
+            "api",
+            "match",
+            "CI4PO05788"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
