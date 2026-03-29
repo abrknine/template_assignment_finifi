@@ -14,14 +14,12 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('API is running 🚀');
+  res.send('API is running');
 });
 
-// Mount routes
 app.use('/api/documents', documentRoutes);
 app.use('/api/match', matchRoutes);
 
-// Error middleware (must be last)
 app.use(errorMiddleware);
 
-module.exports = app;   // 🔥 THIS LINE IS IMPORTANT
+module.exports = app;

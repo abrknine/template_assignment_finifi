@@ -9,10 +9,10 @@ const connectDB = async () => {
     }
 
     await mongoose.connect(mongoURI);
-    console.log('✅ MongoDB connected successfully');
+    console.log('MongoDB connected successfully');
     
   } catch (error) {
-    console.error('❌ MongoDB connection failed:', error.message);
+    console.error('MongoDB connection failed:', error.message);
     // Don't exit on connection failure - server can run without DB
     // but log the error for awareness
   }

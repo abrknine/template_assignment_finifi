@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const matchController = require('../controllers/match.controller');
 
-// Three-way match routes
-router.get('/', (req, res) => {
-  res.json({ message: 'Match routes' });
-});
+// GET three-way match result by PO number
+router.get('/:poNumber', matchController.getMatchResult);
 
 module.exports = router;
