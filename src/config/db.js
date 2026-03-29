@@ -13,8 +13,7 @@ const connectDB = async () => {
     
   } catch (error) {
     console.error('MongoDB connection failed:', error.message);
-    // Don't exit on connection failure - server can run without DB
-    // but log the error for awareness
+    
   }
 };
 

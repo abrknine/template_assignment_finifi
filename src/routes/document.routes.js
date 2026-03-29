@@ -30,17 +30,13 @@ const upload = multer({
   },
 });
 
-/**
- * POST /api/documents/upload
- * Upload and process a document (PO, GRN, or Invoice)
- * Body: { file, documentType: 'po' | 'grn' | 'invoice' }
- */
+//POST /documents/upload - Upload and process a document (PO, GRN, or Invoice)
 router.post('/upload', upload.single('file'), documentController.uploadDocument);
 
-// GET document by ID
+//GET /documents/:id
 router.get('/:id', documentController.getDocument);
 
-// GET all documents for a PO number
+//GET /match/:poNumber
 router.get('/po/:poNumber', documentController.getDocumentsByPoNumber);
 
 module.exports = router;

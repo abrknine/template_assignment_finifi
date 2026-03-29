@@ -82,13 +82,11 @@ exports.uploadDocument = async (req, res) => {
   }
 };
 
-/**
- * Get parsed document by ID
- */
+//Get parsed document by ID
 exports.getDocument = async (req, res) => {
   try {
     const { id } = req.params;
-    const { type } = req.query; // 'po', 'grn', or 'invoice'
+    const { type } = req.query;
 
     if (!type || !['po', 'grn', 'invoice'].includes(type)) {
       return res.status(400).json({
@@ -113,9 +111,7 @@ exports.getDocument = async (req, res) => {
   }
 };
 
-/**
- * Get all documents for a PO number
- */
+// Get all documents for a PO number
 exports.getDocumentsByPoNumber = async (req, res) => {
   try {
     const { poNumber } = req.params;

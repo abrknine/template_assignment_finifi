@@ -16,7 +16,7 @@ async function updateMatchStatus(poNumber) {
     // Check if PO exists
     if (!po) {
       console.log(`PO not found yet for ${poNumber}`);
-      // Create initial match record if it doesn't exist
+      
       let match = await Match.findOne({ poNumber });
       if (!match) {
         match = new Match({
@@ -105,9 +105,8 @@ async function updateMatchStatus(poNumber) {
   }
 }
 
-/**
- * Core validation logic
- */
+
+
 function validateDocuments(po, grns, invoices) {
   const validationResult = {
     matchStatus: 'matched', // Default to matched, downgrade if issues found
@@ -137,9 +136,7 @@ function validateDocuments(po, grns, invoices) {
     },
   };
 
-  // ============================================
-  // 1. Item-Level Validation (By SKU Code)
-  // ============================================
+  
   const poItemMap = new Map();
   po.items.forEach((item) => {
     poItemMap.set(item.skuCode, {
@@ -235,9 +232,6 @@ function validateDocuments(po, grns, invoices) {
     validationResult.itemMatches.push(itemMatch);
   });
 
-  // ============================================
-  // 2. Date Validation
-  // ============================================
   if (invoices.length > 0) {
     invoices.forEach((invoice) => {
       if (invoice.invoiceDate > po.poDate) {
@@ -292,9 +286,9 @@ function validateDocuments(po, grns, invoices) {
   return validationResult;
 }
 
-/**
- * Retrieve match result by PO number
- */
+
+
+
 async function getMatchResult(poNumber) {
   try {
     const match = await Match.findOne({ poNumber });
